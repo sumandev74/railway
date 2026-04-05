@@ -1,0 +1,11 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "gcc bgmi.c -o bgmi -lpthread"
+  },
+  "deploy": {
+    "startCommand": "python telegram_bot.py",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
